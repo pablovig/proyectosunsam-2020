@@ -1,0 +1,18 @@
+<app-header></app-header>
+<main>
+    <div class="contenedor">
+        <h1 class="tituloalimentos contenedor-colorsecundario ">Colaboradores</h1>
+        <div class="contenedor-lista-colaboradores contenedor-blanco">
+            <div class="lista">
+                <div class="top-lista colaborador fondotitulo">Nombre</div>
+                <button *ngFor="let colaborador of colaboradores" class="colaborador selector" [ngClass]="{'activo':colaborador==seleccionado}" (click)="seleccion(colaborador)"><p>{{colaborador.nombreYApellido}}</p></button>
+            </div>
+        </div>
+        <div class="contenedor-botones">
+            <div class="botones-block">
+                <button class="button" (click)="aceptar()">Aceptar</button>
+                <button class="button button2" (click)="cancelar()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,36 @@
+.cantidad {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
+
+.inputcantidad {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0.5rem 0;
+}
+
+.inputcantidad input {
+    width: 99%;
+    border: 0;
+    padding: 0.5rem;
+}
+
+.textocantidad {
+    margin: 1rem 0 0 0;
+}
+
+@media (max-width: 768px) {
+    main {
+        height: 75vh;
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        height: 68vh;
+    }
+}

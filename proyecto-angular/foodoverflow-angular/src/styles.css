@@ -1,0 +1,204 @@
+:root {
+    --color-titulo: #207567;
+    --color-primario: #358873;
+    --color-secundario: #8dc3a7;
+    --color-fondo: #b4d6c1;
+    --color-letras: white;
+    --color-boton-hover: #5cdaba;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-fondo);
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.error {
+    margin: 10px 0px;
+    padding: 12px;
+    text-align: center;
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+
+.titulocolor {
+    font-size: 2rem;
+    color: var(--color-titulo);
+}
+
+.titulo {
+    font-size: 1.2rem;
+    color: var(--color-letras);
+}
+
+.fuentelogo {
+    font-family: 'Pacifico', cursive;
+}
+
+h1 {
+    margin: 0.7rem;
+    width: 100%;
+    text-align: center;
+}
+
+.negrita {
+    font-weight: 600;
+}
+
+.button {
+    padding: 6px 25px;
+    margin: 0 3px;
+    border-radius: 5px;
+    color: var(--color-letras);
+    background-color: var(--color-primario);
+    border-style: none;
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: var(--color-secundario);
+}
+
+.button:hover {
+    background-color: var(--color-fondo);
+}
+
+.button2:hover {
+    background-color: var(--color-fondo);
+}
+
+input {
+    border: solid 1px var(--color-fondo);
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor-colorsecundario {
+    background-color: var(--color-secundario)
+}
+
+.fa.fa-heartbeat {
+    color: red;
+    font-size: 20px;
+}
+
+.border-bottom-colorsecundario {
+    border-bottom: 1px solid var(--color-secundario);
+}
+
+th {
+    background-color: var(--color-titulo);
+}
+
+.contenedor-colorsecundario {
+    background-color: var(--color-secundario)
+}
+
+.contenedor-blanco {
+    background-color: white;
+}
+
+.fondotitulo {
+    background-color: var(--color-titulo);
+}
+
+.border {
+    border: solid 1px var(--color-fondo);
+}
+
+.selector {
+    border: solid 1px var(--color-fondo);
+}
+
+.selector:hover {
+    background-color: var(--color-fondo);
+}
+
+.selector:focus {
+    background-color: var(--color-fondo);
+}
+
+.border-colorsecundario {
+    border-color: var(--color-secundario);
+}
+
+.border-bottom-colorsecundario {
+    border-bottom: 1px solid var(--color-secundario);
+}
+
+.fa-plus-circle {
+    font-size: 25px;
+    color: var(--color-letras);
+    cursor: pointer;
+}
+
+.fa.fa-plus-circle.main {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.fa-plus-circle:hover {
+    color: var(--color-secundario);
+}
+
+.fa-times-circle {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa.fa-heartbeat {
+    color: red;
+    font-size: 20px;
+}
+
+.fa-sign-out {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.fa-edit {
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.fa-trash-o {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.fa-facebook-official {
+    font-size: 40px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.fa-home {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.fa-user {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.border-colorsecundario {
+    border-color: var(--color-secundario);
+}
+
+.boton-eliminar {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: white;
+}

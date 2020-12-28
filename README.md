@@ -3,14 +3,17 @@
 
 En este repositorio se integran dos proyectos realizados en el segundo cuatrimestre de 2020 para la materia Algoritmos 3:
 
-- `FoodOverflow` realizado en Angular (**branch angular**)
-- `TeleFood` realizado en React.js + PrimeReact (**branch react**)
+- `FoodOverflow` realizado en Angular (**proyecto angular**)
+- `TeleFood` realizado en React.js + PrimeReact (**proyecto react**)
 
-Ambos comparten la lógica de negocios en Xtend, la cual fue modelada el primer cuatrimestre de 2020, a la que luego se le agregó la API Rest con SpringBoot y un repositorio en donde se alojan los datos.
+Ambos comparten la lógica de negocios en Xtend, la cual fue modelada en el primer cuatrimestre de 2020, a la que luego se le agregó la API Rest con SpringBoot y un repositorio en donde se alojan los datos.
 
-## Foodoverflow
+
+### Foodoverflow
 
 Esta aplicación mostrará un menú de recetas, en donde inicialmente se pedirá un logueo de usuario. Es responsive para `PC`, `Tablet` y `Teléfono móvil`.
+
+![loginAngular](https://github.com/pablovig/proyectosunsam-2020/raw/master/imagenes%20README/foodoverflow/alimentos.JPG)
 
 Una vez ingresado se podrán visualizar las recetas disponibles, en donde también se podrán filtrar por usuario Autor o nombre de receta.
 
@@ -20,7 +23,8 @@ También hay un Perfil de usuario en donde se detallan sus datos, condiciones y 
 
 EL menú para agregar ingredientes y alimentos preferidos o No preferidos será de la siguiente manera.
 
-## TeleFood
+
+### TeleFood
 
 Esta es más simple que la anterior la cual funciona como una aplicación de mensajería. Debido al poco tiempo que se disponía fue diseñada sólo para el tamaño de un `Teléfono móvil`.
 

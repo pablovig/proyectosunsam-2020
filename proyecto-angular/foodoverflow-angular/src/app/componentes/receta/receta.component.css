@@ -1,0 +1,237 @@
+.contenedor-receta {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.receta {
+    display: flex;
+    width: 60%;
+    border-radius: 2rem;
+    flex-direction: column;
+}
+
+.top-receta {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.imagenreceta {
+    display: flex;
+    width: 12rem;
+    height: 12rem;
+    border-top-left-radius: 2rem;
+}
+
+.perfil-receta {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.inputtitulo {
+    margin: 0.5rem 0.5rem;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.bot-receta {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.textbox {
+    font-family: 'Roboto', sans-serif;
+    border-width: 0.1rem;
+    padding: 0.4rem;
+    margin-left: 0.4rem;
+}
+
+.inforeceta {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.infoizquierda {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-ingredientesypasos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.ingrediente {
+    width: 45%;
+}
+
+.pasos {
+    width: 45%;
+}
+
+table {
+    width: 100%;
+}
+
+table .Tabla_Cruz {
+    text-align: right;
+}
+
+table .Tabla_Valor {
+    text-align: left;
+}
+
+.colaboradores {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor-lista-colaboradores {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 3vh 9vh;
+    border: 0 hidden white;
+    border-radius: 0 0 1vh 1vh;
+}
+
+.lista {
+    box-sizing: border-box;
+    border-width: 1rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 12vh;
+}
+
+.colaborador {
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    padding: 1vh 0;
+    font-weight: 500;
+    position: relative;
+}
+
+.colaborador p {
+    text-align: center;
+    width: 100%;
+}
+
+.colaborador.selector {
+    background-color: white;
+}
+
+.colaborador a {
+    text-align: right;
+    position: absolute;
+    right: 0;
+}
+
+.fa-times-circle {
+    text-align: right;
+}
+
+.top-lista {
+    color: white;
+    justify-content: center;
+}
+
+.botones {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0 0 0;
+}
+
+.buttonoccult {
+    display: none;
+}
+
+.inputtitulo {
+    margin: 0.5rem 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media screen and (max-width: 400px) {
+    .receta {
+        width: 95%
+    }
+    .perfil-receta p {
+        margin-top: 0;
+    }
+    .perfil-receta h2 {
+        font-size: 1.5rem;
+    }
+    .inforeceta {
+        flex-direction: column;
+        width: 100%;
+    }
+    .infoderecha {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .textbox {
+        width: 90%;
+    }
+    .occult {
+        display: none;
+    }
+    .contenedor-ingredientesypasos {
+        flex-direction: column;
+    }
+    .ingrediente {
+        width: 100%;
+    }
+    .pasos {
+        width: 100%;
+    }
+    .contenedor-lista-colaboradores {
+        width: 100%;
+        padding: 0;
+    }
+    .botones {
+        padding-top: 1rem;
+        justify-content: space-evenly;
+    }
+    .buttonoccult {
+        display: flex;
+    }
+    .mobile {
+        display: none;
+    }
+    .inputtitulo {
+        display: flex;
+        text-align: left;
+        max-width: 65%;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width: 768px) {
+    .receta {
+        width: 95%
+    }
+}

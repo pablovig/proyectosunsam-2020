@@ -1,0 +1,106 @@
+<app-header></app-header>
+<div class="contenedor-receta" *ngIf="!(receta==null)">
+    <div class="receta">
+        <div class="top-receta contenedor-colorsecundario">
+            <img src="assets/img/{{receta.img}}" class="imagenreceta" />
+
+            <div class="perfil-receta">
+                <h2 *ngIf="receta.esEditablePor(usuarioLogin); else noEditTitulo"><input type="text" placeholder="Nombre de la receta" data-testid="tituloReceta" data-testname="receta.nombreDelPlato" class="inputtitulo contenedor-colorsecundario" size="15" maxlength="20" [(ngModel)]="receta.nombreDelPlato"></h2>
+                <ng-template #noEditTitulo>
+                    <h2 class="inputtitulo">{{receta.nombreDelPlato}}</h2>
+                </ng-template>
+                <p data-testid="nombreAutor">por {{receta.autor.nombreYApellido}}</p>
+                <p><span class="negrita occult">Inadecuado para </span><span *ngFor="let inadecuado of receta.inadecuadaPara()">{{inadecuado.nombre}}  </span></p>
+            </div>
+        </div>
+        <div class="bot-receta contenedor-blanco">
+
+            <form action="" class="inforeceta">
+                <div class="infoizquierda">
+                    <label for="" class="negrita">Total de calorias</label>
+                    <input *ngIf="receta.esEditablePor(usuarioLogin); else noEditCalorias" type="number" data-testid="caloriasTest" class="textbox" id="calorias" name="receta.calorias" [(ngModel)]="receta.calorias" />
+                    <ng-template #noEditCalorias>
+                        <span>: {{receta.calorias}} </span>
+                    </ng-template>
+                </div>
+                <div class="infoderecha">
+                    <label for="" class="negrita">Dificultad</label>
+                    <select *ngIf="receta.esEditablePor(usuarioLogin); else noEditDificultad" class="form-control textbox border" name="receta.dificultad" [(ngModel)]="receta.dificultad">
+                        <option *ngFor="let dificultad of enumDificultades" [value]="dificultad">{{dificultades[dificultad]}}</option>
+                </select>
+                    <ng-template #noEditDificultad>
+                        <span>: {{receta.dificultad}} </span>
+                    </ng-template>
+                </div>
+            </form>
+
+            <div class="contenedor-ingredientesypasos">
+
+                <div class="ingrediente">
+                    <div class="titulo-bot">
+                        <h3>Ingredientes</h3>
+                        <button *ngIf="receta.esEditablePor(usuarioLogin)" (click)="agregarIngrediente()" class="button mobile">Agregar</button>
+                        <button *ngIf="receta.esEditablePor(usuarioLogin)" (click)="agregarIngrediente()" class="button buttonoccult"><i class="fa fa-plus-circle"></i></button>
+                    </div>
+                    <div>
+                        <table class="TablaIngredientes">
+                            <tr data-testid="fila-ingredientes" *ngFor="let ingrediente of receta.listaDeIngredientes">
+                                <td>{{ingrediente.getNombre()}}</td>
+                                <td class="Tabla_Valor">{{ingrediente.cantidad}}</td>
+                                <td *ngIf="receta.esEditablePor(usuarioLogin)" class="Tabla_Cruz"><a><i (click)="eliminarIngrediente(ingrediente)" class="fa fa-times-circle"></i></a></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="pasos">
+                    <div class="titulo-bot">
+                        <h3>Pasos</h3>
+                        <button *ngIf="receta.esEditablePor(usuarioLogin)" (click)="agregarPaso()" class="button mobile">Agregar</button>
+                        <button *ngIf="receta.esEditablePor(usuarioLogin)" (click)="agregarPaso()" class="button buttonoccult"><i class="fa fa-plus-circle"></i></button>
+                    </div>
+                    <div>
+                        <table class="TablaIngredientes">
+                            <tr data-testid="fila-pasos" *ngFor="let paso of receta.listaDePasos;let indice=index">
+                                <td>{{indice+1}}. {{paso}}</td>
+                                <td *ngIf="receta.esEditablePor(usuarioLogin)" class="Tabla_Cruz"><a><i (click)="eliminarPaso(paso)" class="fa fa-times-circle"></i></a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="colaboradores">
+                <h3>Colaboradores</h3>
+                <button *ngIf="receta.esEditablePor(usuarioLogin)" (click)="agregarColaborador()" class="button mobile">Agregar</button>
+                <button *ngIf="receta.esEditablePor(usuarioLogin)" (click)="agregarColaborador()" class="button buttonoccult"><i class="fa fa-plus-circle"></i></button>
+            </div>
+
+            <div class="contenedor-lista-colaboradores">
+                <div class="lista">
+                    <div class="top-lista colaborador fondotitulo">Nombre</div>
+                    <button data-testid="fila-colaboradores" *ngFor="let colaborador of receta.listaDeColaboradores" class="colaborador selector"><p>{{colaborador.nombreYApellido}}</p><a *ngIf="receta.esAutor(usuarioLogin)" (click)="eliminarColaborador(colaborador)"><i class="fa fa-times-circle"></i></a></button>
+                </div>
+
+
+                <div class="botones">
+                    <button *ngIf="receta.esEditablePor(usuarioLogin); else noEditVolver" (click)="aceptar()" data-testid="guardado" class="button">Aceptar</button>
+                    <button *ngIf="receta.esEditablePor(usuarioLogin)" (click)="cancelar()" class="button button2">Cancelar</button>
+                    <ng-template #noEditVolver>
+                        <button (click)="cancelar()" class="button">Volver</button>
+                    </ng-template>
+                </div>
+
+
+
+            </div>
+            <div class="error" *ngIf="errorMessage"><i class="fa fa-times-circle"></i>{{ errorMessage }}</div>
+            <div class="error" *ngFor="let error of errors">{{error}}</div>
+        </div>
+
+
+    </div>
+
+</div>

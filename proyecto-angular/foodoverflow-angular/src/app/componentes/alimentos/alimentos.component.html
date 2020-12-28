@@ -1,0 +1,17 @@
+<app-header></app-header>
+<main>
+    <div class="contenedor">
+        <h1 class="tituloalimentos contenedor-colorsecundario ">Alimentos</h1>
+        <div class="contenedor-listadealimentos contenedor-blanco">
+            <div>
+                <app-tabla-alimentos [nombreTabla]="nombreTabla"></app-tabla-alimentos>
+            </div>
+            <div class="contenedor-botones">
+                <div class="botones-block">
+                    <button class="button" (click)="aceptar()">Aceptar</button>
+                    <button class="button button2" (click)="cancelar()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

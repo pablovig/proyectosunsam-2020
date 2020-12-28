@@ -1,0 +1,132 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.colaboradores {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor-lista-colaboradores {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 3vh 9vh;
+    border: 0 hidden white;
+    border-radius: 0 0 1vh 1vh;
+}
+
+.contenedor {
+    width: 60%;
+    min-width: 730px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.contenedor h1 {
+    padding: 1rem;
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0 hidden white;
+    border-radius: 1vh 1vh 0 0;
+    font-size: 1.5em;
+}
+
+.lista {
+    box-sizing: border-box;
+    border-width: 1rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.colaborador {
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    padding: 1vh 0;
+    font-weight: 500;
+    position: relative;
+}
+
+.colaborador p {
+    text-align: center;
+    width: 100%;
+}
+
+.top-lista {
+    color: white;
+    justify-content: center;
+}
+
+.colaborador a {
+    text-align: right;
+    position: absolute;
+    right: 0;
+}
+
+.contenedor-botones {
+    padding: 1vh 0;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.botones-block {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0 0 0;
+}
+
+.selector {
+    background-color: white;
+    border: solid 1px var(--color-fondo);
+}
+
+.selector:hover {
+    background-color: var(--color-fondo);
+}
+
+.selector:focus {
+    background-color: var(--color-fondo);
+}
+
+.activo {
+    background-color: var(--color-fondo);
+    border: solid 2px black;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90%;
+        min-width: 385px;
+    }
+    main {
+        height: 75vh;
+    }
+    .contenedor-lista-colaboradores {
+        padding: 3vh 5vh;
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        height: 68vh;
+    }
+    .contenedor {
+        width: 90%;
+        min-width: 330px;
+    }
+    .contenedor-lista-colaboradores {
+        padding: 3vh 2vh;
+    }
+}

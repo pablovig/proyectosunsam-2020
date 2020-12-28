@@ -1,0 +1,47 @@
+.alimento {
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 0;
+    font-weight: 500;
+}
+
+.lista {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 28vh;
+}
+
+.alimento.top {
+    color: white;
+}
+
+.selector {
+    border: solid 1px var(--color-fondo);
+}
+
+.selector:hover {
+    background-color: var(--color-fondo);
+}
+
+.selector:focus {
+    background-color: var(--color-fondo);
+}
+
+.activo {
+    background-color: var(--color-fondo);
+    border: solid 2px black;
+}
+
+@media (max-width: 768px) {
+    .lista {
+        height: 100%;
+        overflow-y: hidden;
+    }
+}

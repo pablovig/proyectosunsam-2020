@@ -1,0 +1,17 @@
+.listado-resultado {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+    .listado-resultado {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width: 768px) {
+    .listado-resultado {
+        width: 75%;
+    }
+}

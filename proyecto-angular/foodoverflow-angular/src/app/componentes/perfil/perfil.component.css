@@ -1,0 +1,249 @@
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor {
+    margin: 3vh 0 5vh;
+    width: 60%;
+    min-width: 750px;
+    display: flex;
+    height: 100%;
+    flex-flow: column;
+    padding: 1vh;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh;
+    border: 0 hidden white;
+    border-radius: 1vh 1vh 0 0;
+}
+
+.top-nombreimc {
+    display: flex;
+    flex-flow: column;
+}
+
+.top-nombreimc-nombre {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.top-nombreimc-imc {
+    font-size: 0.9em;
+}
+
+.top-salud {
+    display: flex;
+    padding: 0 2vh;
+}
+
+.top-salud-img {
+    padding: 0.3vh 0.7vh;
+}
+
+.top-salud-estado {
+    padding: 0.4vh 0.7vh;
+    font-size: 0.9em;
+}
+
+.bot {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding: 0 2vh;
+    border: 0 hidden white;
+    border-radius: 0 0 1vh 1vh;
+}
+
+.datosperfil {
+    width: 75%;
+    min-width: 401px;
+    display: flex;
+    flex-flow: column;
+}
+
+.bot-datos-izq,
+.bot-datos-der {
+    display: flex;
+    justify-content: space-around;
+}
+
+.datos-bloque {
+    width: 40%;
+    min-width: 190px;
+    padding: 1vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.datos-input {
+    border: 1.5px;
+    width: 55%;
+    min-width: 103px;
+    border-radius: 5px;
+    padding: 6px;
+    border-style: solid;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.bot-datos-pesotexto {
+    min-width: 83px;
+}
+
+.condiciones {
+    width: 100%;
+}
+
+.condiciones-nombre,
+.recetas-nombre {
+    padding: 1vh 0;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.condiciones-tipos {
+    padding: 1vh 0;
+    display: flex;
+    flex-flow: wrap;
+    border: 1.5px;
+    border-radius: 7px;
+    border-style: solid;
+}
+
+.condiciones-tipos-bloque {
+    width: 33%;
+    padding: 0.5vh;
+    box-sizing: border-box;
+}
+
+.alimentos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2vh 0;
+}
+
+app-alimentosperfil {
+    width: 45%;
+    display: flex;
+    flex-flow: column;
+}
+
+.contenedor-resultado {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0 0 1rem 0;
+}
+
+.resultados {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 60%;
+}
+
+.listado-resultado {
+    display: flex;
+    justify-content: row;
+    flex-wrap: wrap;
+}
+
+.botonesbot {
+    width: 100%;
+    padding: 2vh;
+    padding-right: 2vh;
+}
+
+.botonesbot-bloque {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    float: right;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        margin: 3vh 0 5vh;
+        width: 95%;
+        min-width: 385px;
+        padding: 1vh;
+    }
+    .listado-resultado {
+        justify-content: center;
+    }
+    .condiciones-tipos-bloque {
+        font-size: 0.9rem;
+    }
+    .datos-bloque {
+        width: 40%;
+        min-width: 180px;
+        padding: 1vh 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .datos-input {
+        width: 55%;
+        min-width: 95px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 400px) {
+    .contenedor {
+        margin: 3vh 0 5vh;
+        min-width: 0;
+    }
+    .top-salud {
+        padding: 1vh 0 0 8vh;
+    }
+    .bot {
+        padding: 0 1vh;
+    }
+    .bot-datos {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        min-width: 0;
+    }
+    .bot-datos-izq,
+    .bot-datos-der {
+        flex-flow: wrap;
+    }
+    .datos-input {
+        width: 55%;
+        min-width: 95px;
+        padding: 6px;
+    }
+    .datos-bloque {
+        width: 100%;
+        min-width: 180px;
+        padding: 0.5vh 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .condiciones-tipos-bloque {
+        font-size: 1rem;
+        width: 50%;
+        min-width: 117px;
+        padding: 0;
+    }
+    .datosperfil {
+        width: 20%;
+        min-width: 0;
+        display: flex;
+        flex-flow: column;
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>FoodOverflow</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/principal.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/cardreceta.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="fuentelogo titulo">Food Overflow</h1>
+        <label class="navtoggle" for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
+        <nav class="nav-links">
+            <a href=""><span class="icononav"><i class="fa fa-home"></i></span>Home</a>
+            <a href=""><span class="icononav"><i class="fa fa-user"></i></span>Perfil</a>
+            <a href=""><i class="fa fa-sign-out"></i><span class="icononav">Salir</span></a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="contenedor-busqueda contenedor-colorsecundario">
+
+
+            <form class="busqueda">
+                <h2>Búsqueda de Recetas</h2>
+                <div class="busqueda-boton">
+                    <input type="text" id="busqueda-boton" placeholder="Buscar..">
+                    <button class="button">Buscar</button>
+                </div>
+
+                <label class="busqueda-checkbox"> <input type="checkbox" id="busqueda-checkbox">Sólo mis recetas</label>
+
+            </form>
+        </div>
+
+        <div class="contenedor-resultado">
+            <h4>Resultados de la busqueda</h4>
+            <div class="resultados">
+
+
+                <div class="listado-resultado">
+                    <div class="card-receta">
+                        <img src="img/pollo.jpg" class="imagenreceta">
+                        <div class="receta-info">
+                            <h3>Pollo al Horno</h3>
+                            <p1>Calorías: 200</p1>
+                            <p1>Dificultad: Media</p1>
+                        </div>
+                        <div class="receta-botones">
+                            <i class="fa fa-edit"></i>
+
+                        </div>
+                    </div>
+
+                    <div class="card-receta">
+                        <img src="img/asado.jpg" class="imagenreceta">
+                        <div class="receta-info">
+                            <h3>Asado al asador</h3>
+                            <p1>Calorías: 300</p1>
+                            <p1>Dificultad: Alta</p1>
+                        </div>
+                        <div class="receta-botones">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </div>
+
+                    <div class="card-receta sin-permiso">
+                        <img src="img/risotto.jpg" class="imagenreceta">
+                        <div class="receta-info">
+                            <h3>Risotto</h3>
+                            <p1>Calorías: 150</p1>
+                            <p1>Dificultad: Baja</p1>
+                        </div>
+                    </div>
+
+                    <div class="card-receta sin-permiso">
+                        <img src="img/ravioles.jpg" class="imagenreceta">
+                        <div class="receta-info">
+                            <h3>Ravioles</h3>
+                            <p1>Calorías: 200</p1>
+                            <p1>Dificultad: Baja</p1>
+                        </div>
+                    </div>
+
+                    <div class="card-receta">
+                        <img src="img/fideos.jpg" class="imagenreceta">
+                        <div class="receta-info">
+                            <h3>Fideos con tuco</h3>
+                            <p1>Calorías: 180</p1>
+                            <p1>Dificultad: Baja</p1>
+                        </div>
+                        <div class="receta-botones">
+                            <i class="fa fa-edit"></i>
+                            <i class="fa fa-trash-o"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="boton-agregar">
+                    <a href=""><i class="fa fa-plus-circle main"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div>
+            <i class="fa fa-facebook-official"></i>
+            <p><span class="fuentelogo"> Food Overflow\ 2020</span><span class="grupo">. Grupo 9 - All rights reserved</span></p>
+        </div>
+    </footer>
+</body>

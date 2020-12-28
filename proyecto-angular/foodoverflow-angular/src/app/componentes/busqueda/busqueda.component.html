@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="contenedor-busqueda contenedor-colorsecundario">
+
+
+    <form class="busqueda">
+        <h2>Búsqueda de Recetas</h2>
+        <div class="busqueda-boton">
+            <input type="search" id="busqueda-boton" name="recetaBuscada" [(ngModel)]="recetaBuscada" placeholder="Buscar..">
+            <button data-testid="buscador" (click)="realizarBusqueda()" class="button">Buscar</button>
+        </div>
+
+        <label class="busqueda-checkbox"> <input type="checkbox" name="isChecked" [(ngModel)]="isChecked" ng-checked="isChecked" id="busqueda-checkbox">Sólo mis recetas</label>
+
+    </form>
+</div>
+
+<div class="contenedor-resultado">
+    <h4>Resultados de la busqueda</h4>
+    <div class="resultados">
+        <app-resultados [recetas]="recetas"></app-resultados>
+        <div class="boton-agregar">
+            <a (click)="nuevaReceta()"><i class="fa fa-plus-circle main"></i></a>
+        </div>
+    </div>
+</div>

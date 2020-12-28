@@ -1,0 +1,53 @@
+.card-receta {
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 0.6rem;
+    display: flex;
+    height: 4rem;
+    width: 15rem;
+    min-width: 15rem;
+    margin: 0.5rem 1rem 1rem 0;
+    cursor: pointer;
+}
+
+.sin-permiso {
+    border: 2px solid white;
+}
+
+.receta-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 58%;
+}
+
+.imagenreceta {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
+
+.receta-botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 15%;
+}
+
+.receta-info h3 {
+    margin: 0px;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-receta {
+    border: 0.2rem solid var(--color-titulo);
+}
+
+p {
+    margin: 0.1rem;
+}

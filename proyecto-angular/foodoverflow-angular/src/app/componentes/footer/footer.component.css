@@ -1,0 +1,39 @@
+footer {
+    background-color: rgba(0, 0, 0, .3);
+    color: var(--color-letras);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    margin-right: 30%
+}
+
+.fa-facebook-official {
+    font-size: 40px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) and (min-width:401px) {
+    footer div {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    footer .grupo {
+        display: none;
+    }
+    footer div {
+        width: 100%;
+        margin-right: 30%
+    }
+}

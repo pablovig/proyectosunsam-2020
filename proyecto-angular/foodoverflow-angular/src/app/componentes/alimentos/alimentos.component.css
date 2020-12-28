@@ -1,0 +1,72 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.contenedor {
+    width: 60%;
+    min-width: 730px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.contenedor h1 {
+    padding: 1rem;
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0 hidden white;
+    border-radius: 1vh 1vh 0 0;
+    font-size: 1.5em;
+}
+
+.contenedor-listadealimentos {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 3vh 9vh;
+    border: 0 hidden white;
+    border-radius: 0 0 1vh 1vh;
+}
+
+.contenedor-botones {
+    padding: 1vh 0;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.botones-block {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0 0 0;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90%;
+        min-width: 385px;
+    }
+    main {
+        height: 68vh;
+    }
+    .contenedor-listadealimentos {
+        padding: 3vh 5vh;
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        height: 58vh;
+    }
+    .contenedor {
+        width: 90%;
+        min-width: 330px;
+    }
+    .contenedor-listadealimentos {
+        padding: 3vh 2vh;
+    }
+}

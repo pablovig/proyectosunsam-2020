@@ -1,0 +1,29 @@
+<app-header></app-header>
+<main>
+    <div class="contenedor">
+        <h1 class="tituloalimentos contenedor-colorsecundario ">Pasos</h1>
+        <div class="contenedor-lista-paso contenedor-blanco">
+            <div class="lista">
+                <div class="top-lista paso fondotitulo">Listado de pasos</div>
+                <button *ngFor="let paso of pasos" class="paso selector" [ngClass]="{'activo':paso==seleccionado}" (click)="seleccion(paso)"><p>{{paso}}</p></button>
+            </div>
+            <div class="nuevoPaso">
+                <div class="textonuevoPaso">Introducir paso:</div>
+                <div class="inputnuevoPaso border">
+                    <input type="text" placeholder="" id="unPaso" [(ngModel)]="unPaso">
+                </div>
+                <div class="botones-separados">
+                    <button class="button" (click)="agregarPaso()" accesskey="enter">Agregar</button>
+                    <button class="button button2" (click)="borrarPaso()">Borrar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-botones">
+            <div class="botones-block">
+                <button class="button" (click)="aceptar()">Aceptar</button>
+                <button class="button button2" (click)="cancelar()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</main>

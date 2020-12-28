@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>FoodOverflow</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/principal.css" rel="stylesheet">
+    <link href="css/perfil.css" rel="stylesheet">
+    <link href="css/cardreceta.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="fuentelogo titulo">Food Overflow</h1>
+        <label class="navtoggle" for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
+        <nav class="nav-links">
+            <a href=""><span class="icononav"><i class="fa fa-home"></i></span>Home</a>
+            <a href=""><span class="icononav"><i class="fa fa-user"></i></span>Perfil</a>
+            <a href=""><i class="fa fa-sign-out"></i><span class="icononav">Salir</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <div class="top perfil-top contenedor-colorsecundario">
+                <div class="top-nombreimc">
+                    <div class="top-nombreimc-nombre">Juan Carlos de la Hoya</div>
+                    <div class="top-nombreimc-imc">IMC: 35</div>
+                </div>
+                <div class="top-salud">
+                    <div class="top-salud-img"><i class="fa fa-heartbeat"></i></div>
+                    <div class="top-salud-estado">Estado saludable</div>
+                </div>
+            </div>
+            <div class="bot">
+                <div class="bot-datos">
+                    <div class="bot-datos-izq">
+                        <div class="bot-datos-peso datos-bloque">
+                            <label class="pesotexto" for="peso">Peso (Kgs.)</label>
+                            <input type="text" name="peso" id="peso" class="datos-input border-colorsecundario">
+                        </div>
+                        <div class="bot-datos-estatura datos-bloque">
+                            <label for="estatura" class="bot-datos-estaturatexto">Estatura</label>
+                            <input type="text" name="estatura" id="estatura" class="datos-input border-colorsecundario">
+                        </div>
+
+                    </div>
+                    <div class="bot-datos-der">
+
+                        <div class="bot-datos-nacimiento datos-bloque">
+                            <label class="bot-datos-nacimientotexto" for="nacimiento">Nacimiento</label>
+                            <input type="date" id="nacimiento" class="datos-input border-colorsecundario" name="nacimiento">
+                        </div>
+                        <div class="bot-datos-rutina datos-bloque">
+                            <label class="bot-datos-rutinatexto" for="rutina">Rutina</label>
+                            <select class="datos-input border-colorsecundario" id="rutina" name="rutina">
+                                <option value="intensivo">Intensivo</option>
+                                <option value="activo">Activo</option>
+                                <option value="mediano">Mediano</option>
+                                <option value="leve">Leve</option>
+                                <option value="nada">Nada</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="condiciones">
+                    <div class="condiciones-nombre">Condiciones</div>
+                    <div class="condiciones-tipos border-colorsecundario">
+                        <div class="condiciones-tipos-bloque">
+                            <label class="tipos-bloque" for="diabetico">
+                                <input type="checkbox" id="diabetico" name="diabetico">Diabético</label>
+                        </div>
+                        <div class="condiciones-tipos-bloque">
+                            <label class="tipos-bloque" for="celiaco">
+                                <input type="checkbox" id="celiaco" name="celiaco">Celíaco</label>
+                        </div>
+                        <div class="condiciones-tipos-bloque">
+                            <label class="tipos-bloque" for="vegano">
+                                <input type="checkbox" id="vegano" name="vegano">Vegano</label>
+                        </div>
+                        <div class="condiciones-tipos-bloque">
+                            <label class="tipos-bloque" for="hipertenso">
+                                <input type="checkbox" id="hipertenso" name="hipertenso">Hipertenso</label>
+                        </div>
+                        <div class="condiciones-tipos-bloque">
+                            <label class="tipos-bloque" for="vegetariano">
+                                <input type="checkbox" id="vegetariano" name="vegetariano">Vegetariano</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alimentos">
+                    <div class="alimentos-display">
+                        <div class="alimentos-top">
+                            <div class="alimentos-nombre">Alimentos preferidos</div>
+                            <button class="alimentos-boton button">Agregar</button>
+                            <a href="" class="alimentos-boton-400 button2 selector"><i class="fa fa-plus-circle"></i></a>
+                        </div>
+                        <table class="alimentos-lista border">
+                            <tr>
+                                <td colspan="2" class="alimentos-bloquelista-top fondotitulo">Alimento</td>
+                            </tr>
+                            <tr>
+                                <td class="alimentos-bloquelista-espacio"></td>
+                                <td class="alimentos-bloquelista border-bottom-colorsecundario">Lentejas</td>
+                                <td class="border-bottom-colorsecundario"><i class="fa fa-times-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="alimentos-bloquelista-espacio"></td>
+                                <td class="alimentos-bloquelista border-bottom-colorsecundario">Cebolla</td>
+                                <td class="border-bottom-colorsecundario"><i class="fa fa-times-circle"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="alimentos-display">
+                        <div class="alimentos-top">
+                            <div class="alimentos-nombre ">Alimentos no preferidos</div>
+                            <button class="alimentos-boton button">Agregar</button>
+                            <a href="" class="alimentos-boton-400 button2 selector"><i class="fa fa-plus-circle"></i></a>
+                        </div>
+                        <table class="alimentos-lista border-colorsecundario">
+                            <tr>
+                                <td colspan="2" class="alimentos-bloquelista-top fondotitulo border-bottom-colorsecundario">Alimento</td>
+                            </tr>
+                            <tr>
+                                <td class="alimentos-bloquelista border-bottom-colorsecundario">Coliflor</td>
+                                <td class="border-bottom-colorsecundario"><i class="fa fa-times-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="alimentos-bloquelista border-bottom-colorsecundario">Chauchas</td>
+                                <td class="border-bottom-colorsecundario"><i class="fa fa-times-circle"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="recetas">
+                    <div class="recetas-nombre">Mis recetas</div>
+                    <div class="listado-resultado">
+                        <div class="card-receta">
+                            <img src="img/pollo.jpg" class="imagenreceta">
+                            <div class="receta-info">
+                                <h3>Pollo al Horno</h3>
+                                <p1>Calorías: 200</p1>
+                                <p1>Dificultad: Media</p1>
+                            </div>
+                            <div class="receta-botones">
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash-o"></i>
+                            </div>
+                        </div>
+
+                        <div class="card-receta">
+                            <img src="img/asado.jpg" class="imagenreceta">
+                            <div class="receta-info">
+                                <h3>Asado al asador</h3>
+                                <p1>Calorías: 300</p1>
+                                <p1>Dificultad: Alta</p1>
+                            </div>
+                            <div class="receta-botones">
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash-o"></i>
+                            </div>
+                        </div>
+                        <div class="card-receta">
+                            <img src="img/fideos.jpg" class="imagenreceta">
+                            <div class="receta-info">
+                                <h3>Fideos con tuco</h3>
+                                <p1>Calorías: 180</p1>
+                                <p1>Dificultad: Baja</p1>
+                            </div>
+                            <div class="receta-botones">
+                                <i class="fa fa-edit"></i>
+                                <i class="fa fa-trash-o"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="botonesbot">
+                    <div class="botonesbot-bloque">
+                        <div class="button">Aceptar</div>
+                        <div class="button button2">Cancelar</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <i class="fa fa-facebook-official"></i>
+            <p><span class="fuentelogo"> Food Overflow\ 2020</span><span class="grupo">. Grupo 9 - All rights reserved</span></p>
+        </div>
+    </footer>
+</body>

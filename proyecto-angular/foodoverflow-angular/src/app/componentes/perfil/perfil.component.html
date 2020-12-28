@@ -1,0 +1,78 @@
+<app-header></app-header>
+<main>
+    <div class="contenedor" *ngIf="!(usuarioPerfil==null)">
+        <div class="top perfil-top contenedor-colorsecundario">
+            <div class="top-nombreimc">
+                <div class="top-nombreimc-nombre">{{usuarioPerfil.nombreYApellido}}</div>
+                <div class="top-nombreimc-imc">IMC: {{usuarioPerfil.calculoIMC() | number:'1.2-2':'en'}}</div>
+            </div>
+            <div class="top-salud">
+                <div class="top-salud-img"><i class="fa fa-heartbeat"></i></div>
+                <div class="top-salud-estado">{{esSaludableTexto()}}</div>
+            </div>
+        </div>
+
+
+        <div class="bot">
+            <div class="datosperfil">
+                <div class="bot-datos-izq">
+                    <div class="bot-datos-peso datos-bloque">
+                        <label class="pesotexto" for="peso">Peso (Kgs.)</label>
+                        <input type="number" name="peso" id="peso" class="datos-input border-colorsecundario" [(ngModel)]="usuarioPerfil.peso" data-testid="usuarioPeso">
+                    </div>
+                    <div class="bot-datos-estatura datos-bloque">
+                        <label for="estatura" class="bot-datos-estaturatexto">Estatura</label>
+                        <input type="number" name="estatura" id="estatura" class="datos-input border-colorsecundario" [(ngModel)]="usuarioPerfil.estatura">
+                    </div>
+
+                </div>
+                <div class="bot-datos-der">
+
+                    <div class="bot-datos-nacimiento datos-bloque">
+                        <label class="bot-datos-nacimientotexto" for="nacimiento">Nacimiento</label>
+                        <input type="date" id="nacimiento" class="datos-input border-colorsecundario" name="date" [(ngModel)]="usuarioPerfil.fechaDeNacimiento" [value]= "usuarioPerfil.fechaDeNacimiento" placeholder="yyyy-MM-dd">
+                    </div>
+                    <div class="bot-datos-rutina datos-bloque">
+                        <label class="bot-datos-rutinatexto" for="rutina">Rutina</label>
+                        <select class="datos-input border-colorsecundario" id="rutina" [(ngModel)]="usuarioPerfil.rutina" name="usuarioPerfil.rutina">
+                            <option *ngFor="let rutina of listaDeRutinas" [value]="rutina">{{rutinas[rutina]}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="condiciones">
+                <div class="condiciones-nombre">Condiciones</div>
+                <div class="condiciones-tipos border-colorsecundario">
+                    <div class="condiciones-tipos-bloque" *ngFor="let condicion of condiciones">
+                        <label class="tipos-bloque" for={{condicion.nombre}}>
+                            <input type="checkbox" id={{condicion.nombre}} name={{condicion.nombre}} [checked]="tieneCondicion(condicion)" (change)="modificarCondicion(condicion)" data-testid="'condicion_' + condicion.nombre">
+                            {{condicion.nombre}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alimentos">
+                <app-alimentosperfil [titulo]="'Alimentos Preferidos'" [listaDeAlimentos]="usuarioPerfil.alimentosPreferidos"></app-alimentosperfil>
+                <app-alimentosperfil [titulo]="'Alimentos No Preferidos'" [listaDeAlimentos]="usuarioPerfil.alimentosDisgustados"></app-alimentosperfil>
+            </div>
+
+            <div class="recetas">
+                <div class="recetas-nombre">Mis recetas</div>
+                <div class="listado-resultado">
+                    <app-cardreceta *ngFor="let receta of recetasDeUsuario" [receta]="receta" [resultado]="this"></app-cardreceta>
+
+                </div>
+            </div>
+
+            <div class="botonesbot">
+                <div class="botonesbot-bloque">
+                    <div class="button" id ="botonAceptar" (click)="aceptar()" data-testid="aceptarCambios">Aceptar</div>
+                    <div class="button button2" (click)="cancelar()" data-testid="cancelarCambios">Cancelar</div>
+                </div>
+            </div>
+            <div class="error" *ngIf="errorMessage"><i class="fa fa-times-circle" id="errorMessage"></i>{{ errorMessage }}</div>
+        </div>
+    </div>
+</main>

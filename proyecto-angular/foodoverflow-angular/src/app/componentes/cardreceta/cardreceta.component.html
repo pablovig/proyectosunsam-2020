@@ -1,0 +1,12 @@
+<div (click)="verReceta()" class="card-receta">
+    <img src="assets/img/{{receta.img}}" class="imagenreceta">
+    <div class="receta-info">
+        <h3>{{receta.nombreDelPlato}}</h3>
+        <p>Calorías: {{receta.calorias}}</p>
+        <p>Dificultad: {{receta.dificultad}}</p>
+    </div>
+    <div *ngIf="receta.esEditablePor(usuarioLogin)" class="receta-botones">
+        <a (click)="editarReceta()"><i class="fa fa-edit"></i></a>
+        <a [attr.data-testid]="'eliminar_' + receta.id" (click)="eliminar(receta)"><i class="fa fa-trash-o"></i></a>
+    </div>
+</div>

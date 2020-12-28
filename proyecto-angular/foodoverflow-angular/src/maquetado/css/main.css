@@ -1,0 +1,110 @@
+    h4 {
+        font-size: 1.2rem;
+        margin-top: 3rem;
+        width: 60%;
+    }
+    
+    p .recetainfo {
+        margin: 0.1rem;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .contenedor-busqueda {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 0 1rem 0;
+    }
+    
+    .busqueda {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 60%;
+    }
+    
+    .busqueda-boton input {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .busqueda-boton {
+        display: flex;
+    }
+    
+    .busqueda-checkbox {
+        margin: 1rem 0 0 0;
+    }
+    
+    .contenedor-resultado {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 0 1rem 0;
+    }
+    
+    .resultados {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .listado-resultado {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+    }
+    
+    .boton-agregar {
+        display: flex;
+        justify-content: flex-end;
+        width: 60%;
+        position: fixed;
+        bottom: 8vh;
+    }
+    
+    @media screen and (max-width: 400px) {
+        .listado-resultado {
+            width: 95%;
+        }
+        .busqueda {
+            width: 95%;
+        }
+        h4 {
+            width: 95%;
+        }
+        .boton-agregar {
+            width: 90%;
+        }
+        .card-receta {
+            width: 100%;
+            margin: 0 0 1rem 0;
+        }
+    }
+    
+    @media screen and (min-width:401px) and (max-width: 768px) {
+        .listado-resultado {
+            width: 75%;
+        }
+        .busqueda {
+            width: 90%;
+        }
+        h4 {
+            width: 90%;
+        }
+        .boton-agregar {
+            width: 75%;
+        }
+    }

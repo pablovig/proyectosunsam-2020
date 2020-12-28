@@ -1,0 +1,264 @@
+:root {
+    --color-titulo: #207567;
+    --color-primario: #358873;
+    --color-secundario: #8dc3a7;
+    --color-fondo: #b4d6c1;
+    --color-letras: white;
+    --color-boton-hover: #5cdaba;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-fondo);
+    box-sizing: border-box;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    background-color: var(--color-primario);
+    color: var(--color-letras);
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+header a {
+    color: var(--color-letras);
+    text-decoration: none;
+    padding: 0 1.2rem;
+    font-weight: 500;
+    font-size: 1rem;
+    height: 100%;
+    display: flex;
+}
+
+.nav-links a:hover {
+    background-color: var(--color-fondo);
+}
+
+.titulocolor {
+    font-size: 2rem;
+    color: var(--color-titulo);
+}
+
+.titulo {
+    font-size: 1.2rem;
+    color: var(--color-letras);
+}
+
+.fuentelogo {
+    font-family: 'Pacifico', cursive;
+}
+
+h1 {
+    margin: 0.7rem;
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, .3);
+    color: var(--color-letras);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    margin-right: 30%
+}
+
+.negrita {
+    font-weight: 600;
+}
+
+.button {
+    padding: 6px 25px;
+    margin: 0 3px;
+    border-radius: 5px;
+    color: var(--color-letras);
+    background-color: var(--color-primario);
+    border-style: none;
+    display: flex;
+}
+
+.button2 {
+    background-color: var(--color-secundario);
+}
+
+.button:hover {
+    background-color: var(--color-fondo);
+}
+
+.button2:hover {
+    background-color: var(--color-fondo);
+}
+
+input {
+    border: solid 1px var(--color-fondo);
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-receta {
+    border: 0.2rem solid var(--color-titulo);
+}
+
+.contenedor-colorsecundario {
+    background-color: var(--color-secundario)
+}
+
+.contenedor-blanco {
+    background-color: white;
+}
+
+.fondotitulo {
+    background-color: var(--color-titulo);
+}
+
+.border {
+    border: solid 1px var(--color-fondo);
+}
+
+.selector {
+    border: solid 1px var(--color-fondo);
+}
+
+.selector:hover {
+    background-color: var(--color-fondo);
+}
+
+.selector:focus {
+    background-color: var(--color-fondo);
+}
+
+.border-colorsecundario {
+    border-color: var(--color-secundario);
+}
+
+.border-bottom-colorsecundario {
+    border-bottom: 1px solid var(--color-secundario);
+}
+
+.fa-plus-circle:hover {
+    color: var(--color-secundario);
+}
+
+.fa-times-circle {
+    color: red;
+    font-size: 20px;
+}
+
+.fa.fa-heartbeat {
+    color: red;
+    font-size: 20px;
+}
+
+.fa-sign-out {
+    font-size: 22px;
+}
+
+.fa-plus-circle {
+    font-size: 25px;
+    color: var(--color-letras)
+}
+
+.fa.fa-plus-circle.main {
+    font-size: 40px;
+}
+
+.fa-edit {
+    font-size: 23px;
+}
+
+.fa-trash-o {
+    font-size: 25px
+}
+
+.fa-facebook-official {
+    font-size: 40px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+}
+
+.fa-home {
+    font-size: 22px;
+}
+
+.fa-user {
+    font-size: 22px;
+}
+
+.navtoggle {
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+.icononav {
+    display: none;
+}
+
+@media screen and (max-width: 400px) {
+    footer .grupo {
+        display: none;
+    }
+    footer div {
+        width: 100%;
+        margin-right: 30%
+    }
+    .nav-links {
+        display: none;
+        height: 15%;
+    }
+    .nav-links a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        clear: right;
+        justify-content: space-between;
+        margin: 0;
+        float: right;
+    }
+    .navtoggle {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 1rem;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+    }
+    #toggle:checked+.nav-links {
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        position: absolute;
+        width: 35%;
+        margin-top: 5.3rem;
+        background-color: var(--color-primario);
+    }
+    .icononav {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width:401px) {
+    footer div {
+        width: 100%;
+        margin-right: 0;
+    }
+}

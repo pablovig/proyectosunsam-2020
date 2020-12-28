@@ -1,0 +1,14 @@
+<div class="alimentos-top">
+    <div class="alimentos-nombre">{{titulo}}</div>
+    <button class="alimentos-boton button" (click)="goToAlimento()">Agregar</button>
+    <a href="" class="alimentos-boton-400 button2 selector"><i class="fa fa-plus-circle"></i></a>
+</div>
+<table class="alimentos-lista border">
+    <tr>
+        <th colspan="2" class="alimentos-bloquelista-top fondotitulo border-bottom-colorsecundario">Alimento</th>
+    </tr>
+    <tr *ngFor="let alimento of listaDeAlimentos">
+        <td class="alimentos-bloquelista border-bottom-colorsecundario">{{alimento.nombreDeAlimento}}</td>
+        <td class="border-bottom-colorsecundario"><button class="boton-eliminar" (click)=eliminarAlimento(alimento)><i class="fa fa-times-circle"></i></button></td>
+    </tr>
+</table>

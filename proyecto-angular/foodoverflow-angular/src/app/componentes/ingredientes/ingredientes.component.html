@@ -1,0 +1,23 @@
+<app-header></app-header>
+<main>
+    <div class="contenedor">
+        <h1 class="tituloalimentos contenedor-colorsecundario">Ingredientes</h1>
+        <div class="contenedor-listadealimentos contenedor-blanco">
+            <app-tabla-alimentos [nombreTabla]="nombreTabla"></app-tabla-alimentos>
+            <div class="cantidad">
+                <div class="textocantidad">Cantidad</div>
+                <div class="inputcantidad border">
+                    <input type="text" placeholder="" id="cantidad" [(ngModel)]="cantidad">
+                </div>
+
+            </div>
+            <div class="contenedor-botones">
+                <div class="botones-block">
+                    <button accesskey="enter" class="button" (click)="aceptar()">Aceptar</button>
+                    <button class="button button2" (click)="cancelar()">Cancelar</button>
+                </div>
+                <div class="error" *ngIf="errorMessage"><i class="fa fa-times-circle"></i>{{ errorMessage }}</div>
+            </div>
+        </div>
+    </div>
+</main>

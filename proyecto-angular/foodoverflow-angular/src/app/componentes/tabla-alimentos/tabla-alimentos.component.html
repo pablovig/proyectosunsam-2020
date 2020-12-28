@@ -1,0 +1,4 @@
+<div class="lista">
+    <div class="fondotitulo alimento top">{{nombreTabla}}</div>
+    <button class="alimento selector contenedor-blanco" [ngClass]="{'activo': alimento==alimentoSeleccionado}" *ngFor="let alimento of alimentos" (click)=seleccionarAlimento(alimento)>{{alimento.nombreDeAlimento}}</button>
+</div>
