@@ -8,7 +8,7 @@ En este repositorio se integran dos proyectos realizados en el segundo cuatrimes
 
 Ambos comparten la lógica de negocios en Xtend, la cual fue modelada en el primer cuatrimestre de 2020, a la que luego se le agregó la API Rest con SpringBoot y un repositorio en donde se alojan los datos.
 
-
+                                Los proyectos fueron realizados por **Pablo Vigliero** (Yo) y **Santiago Ranieri**.
 
 ## Foodoverflow
 
