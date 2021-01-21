@@ -61,7 +61,7 @@ Al hacer doble click en alguno de ellos se mostrará el contenido del mensaje, u
 También tenemos la posibilidad de enviar un mensaje desde el menú desplegable superior derecho, en donde nos deriva a una nueva pantalla con nuestros 
 contactos.
 
-![menuReact](https://github.com/pablovig/proyectosunsam-2020/blob/master/imagenes%20README/telefood/menudesplegable.JPG)
+![menuReact](https://github.com/pablovig/proyectosunsam-2020/blob/master/imagenes%20README/telefood/menudesplegable.jpg)
 
 Al seleccionar en cualquiera de ellos nos dirige a lo que será la escritura de nuestro mensaje a enviar.
 
